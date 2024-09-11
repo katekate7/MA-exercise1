@@ -26,20 +26,25 @@
                 <li><a href="#">Product</a></li>
                 <li><a href="#">Resource</a></li>
                 <li><a href="#">Contact</a></li>
-                <li class="theme-togglemenu" id="themeToggle">
-                    <!-- change theme-->
-                    <img src="image/Moon_fill.svg" class="moon"/>
-                </li>
-            </ul>
-        </div>
+            <!-- Mobile theme toggle inside the menu -->
+            <li class="theme-togglemenu">
+                <input type="checkbox" id="theme-toggle-mobile" />
+                <label for="theme-toggle-mobile" class="toggle-label">
+                    <img src="image/Moon_fill_light.svg" class="moon"/>
+                    <img src="image/Sun_fill.svg" class="sun"/>
+                </label>
+            </li>
+        </ul>
+    </div>
 
-        <div class="toggle-container">
-            <input type="checkbox" id="theme-toggle" />
-            <label for="theme-toggle" class="toggle-label">
-                <img src="image/Moon_fill_light.svg" class="moon"/>
-                <img src="image/Sun_fill.svg" class="sun"/>
-            </label>
-        </div>
+    <!-- Large screen toggle -->
+    <div class="toggle-container" id="themeToggleLarge">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" class="toggle-label">
+            <img src="image/Moon_fill_light.svg" class="moon"/>
+            <img src="image/Sun_fill.svg" class="sun"/>
+        </label>
+    </div>
 
     </div>
     <div class="twocontainers">

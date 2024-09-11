@@ -126,6 +126,9 @@ body.dark-theme .menu li a:hover {
     .menu li {
         margin: 10px 0;
         text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .theme-togglemenu {

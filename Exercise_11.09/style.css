@@ -1,0 +1,478 @@
+@import url('https://fonts.google.com/specimen/Poppins');
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+            background-color: #F2F9FE;
+        }
+
+        body.light-theme {
+            background-color: #F2F9FE; 
+            color: #000000;
+        }
+
+        body.dark-theme {
+            background-color: #111729;
+            color: #F2F9FE;
+        }
+
+.logo img {
+    content: url('image/alarado-icon-homepage.svg'); /* logo light theme */
+}
+
+/* logo dark theme */
+body.dark-theme .logo img {
+    content: url('image/alarado-icon-homepage-dark.svg');
+}
+body.dark-theme .close-btn {
+    color: #000000; 
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F2F9FE;
+    padding: 10px 20px;
+    height: 70px;
+}
+
+.navbar .logo{
+    display: flex;
+    align-items: center;
+}
+
+body.dark-theme .navbar {
+    background-color: #111729; 
+}
+
+/* icon for phone version hidden in computer version */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #909193;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s ease, background-color 0.3s ease; 
+}
+
+.menu li a:hover {
+    color: #111729; 
+}
+
+body.dark-theme .menu li a:hover {
+    color: #F2F9FE; 
+    background-color: #111729; 
+}
+
+.theme-toggle {
+    cursor: pointer;
+    display: none; 
+}
+
+.theme-toggle svg {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.close-btn {
+    visibility: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.theme-togglemenu{
+    visibility: hidden;
+}
+
+@media (max-width: 1023px) {
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 5px;
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 5px;
+        width: 30%;
+        height: 100%;
+        background-color: #F2F9FE;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: max-height 0.5s ease, opacity 0.5s ease; 
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .theme-togglemenu {
+        display: block; 
+    }
+
+    .toggle-container {
+        visibility: hidden;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+    
+}
+
+        .theme-toggle {
+            cursor: pointer;
+        }
+
+        .theme-toggle svg {
+            max-width: 24px;
+            max-height: 24px;
+            height: 100%;
+            width: 100%;
+        }
+        .twocontainers{
+            max-height: 500px;
+            height: 100%;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            padding: 50px;
+        }
+        .container1{
+            max-height: 500px;
+            height: 100%;
+            width: 50%;
+        }
+        .container2{
+            max-height: 500px;
+            height: 100%;
+            width: 50%;
+        }
+        .container1 h1{
+            font-size: 48px; 
+            line-height: 1.5; 
+            color: #111729; 
+            font-weight: 800; 
+            letter-spacing: -1px; 
+            font-family: 'Poppins', sans-serif;
+        }
+        body.dark-theme .container1 h1 {
+            color: #F2F9FE; 
+        }
+        body.dark-theme .container1 p {
+            color: #F2F9FE; 
+        }
+        .container1 p{
+            line-height: 1.2; 
+            color: #111729; 
+            font-weight: 700; 
+            letter-spacing: -1px; 
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+        }
+        .describtion {
+            line-height: 1.2; 
+            color: #909193; 
+            font-weight: 500; 
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .buttons{
+            max-width: 270px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center; 
+        }
+        .buttonOne{
+            background-color: #2A4DD0; 
+            color: white; 
+            font-weight: bold;
+            border: none;
+            border-radius: 12px; 
+            padding: 15px 30px; 
+            font-size: 12px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            margin-right: 25px;
+            width: 85px;
+        }
+        .buttonOne:hover {
+            background-color: #1a3db8; 
+        }
+        .buttonTwo{
+            color: #2A4DD0;
+            font-size: 13px;
+            text-decoration: none;
+            position: relative;
+            font-family: 'Poppins', sans-serif;
+            width: 85px;
+            text-decoration: underline;
+        }
+
+        .info-container {
+            display: flex;
+            gap: 40px; 
+            margin-top: 40px;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: #707070; 
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .checkmark {
+            color: #3ba946; 
+            margin-right: 10px; 
+            font-size: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container2 {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+        .illustration-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; 
+        }
+
+
+@media screen and (min-width: 1024px) {
+    .twocontainers {
+        flex-direction: row; 
+        padding: 90px;
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+    .container1, .container2 {
+        width: 50%;
+        box-sizing: border-box; 
+        font-family: 'Poppins', sans-serif;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .twocontainers {
+        flex-direction: column-reverse; 
+        padding: 20px;
+        box-sizing: border-box;
+        max-height: 100%;
+        padding: 90px;
+    }
+    .container1 {
+        width: 100%; 
+        max-width: 100%; 
+        box-sizing: border-box;
+    }
+    .container2{
+        max-width: 750px;
+        width: 100%;
+        max-height: 600px;
+        min-height: 100%;
+        box-sizing: border-box;
+        height:100vh;
+        display: flex;
+        align-items: center;
+        justify-content:center; 
+    }
+    .container1 h1 {
+        font-size: 36px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .describtion {
+        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+    }
+    br {
+        display: none;
+    }
+    .close-btn {
+        font-size: 24px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        opacity: 0; 
+        visibility: hidden;
+        transition: opacity 0.5s ease; 
+    }
+    
+    /* When menu is active, cross icon is visible */
+    .menu.active .close-btn {
+        opacity: 1; 
+        visibility: visible; 
+    }
+    .theme-togglemenu{
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .twocontainers {
+        flex-direction: column-reverse; 
+        height:100vh;
+        margin-top: 150px;
+        display: flex;
+        align-items: center;
+        justify-content:center; 
+        padding: 10px;
+        box-sizing: border-box;
+        padding: 50px;
+    }
+    .container1 {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .container1 h1 {
+        text-align:left;
+        font-size: 38px; 
+        line-height: 1.5; 
+        color: #111729; 
+        font-family: 'Poppins', sans-serif;
+    }
+    br {
+        display: none;
+    }
+    
+    .container2 {
+        max-width: 500px;
+        width: 100%;
+        max-height: 500px;
+        min-height: 100%;
+        box-sizing: border-box;
+        height:100vh;
+        display: flex;
+        align-items: center;
+        justify-content:center; 
+    }
+    .describtion {
+        font-size: 16px;
+        text-align:left;
+        font-family: 'Poppins', sans-serif;
+    }
+    .buttons {
+        max-width: 400px;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    .buttonOne, .buttonTwo {
+        max-width: 150px;
+        width: 100%;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+    .info-container {
+        flex-direction: row;
+        gap: 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .close-btn {
+        visibility: visible;
+    }
+    .theme-togglemenu{
+        visibility: visible;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.toggle-label {
+    background-color: #ddd;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    width: 60px;
+    height: 30px;
+}
+
+.toggle-label .sun, .toggle-label .moon {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .toggle-label .sun {
+    opacity: 0;
+}
+
+input[type="checkbox"]:checked + .toggle-label .moon {
+    opacity: 1;
+}
+
+.toggle-label .moon {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+input[type="checkbox"]:checked + .toggle-label {
+    background-color: #333;
+}
+
